@@ -1,0 +1,616 @@
+/* General Body and Header Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex; /* Solution 3: Flexbox for layout */
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #333;
+    padding: 20px 0;
+}
+
+/* Navigation Styling */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 25px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 69, 105);
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffd700;
+    transform: scale(1.1);
+}
+
+/* Home Section */
+#home {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgb(27, 31, 28);
+    min-height: calc(100vh - 150px); /* Ensures content takes enough space */
+    flex-grow: 1; /* Solution 3: Flexbox for layout */
+}
+
+/* Profile Container - Align Left & Right */
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: auto;
+    gap: 20px;
+}
+
+/* Profile Image - Moves Left */
+.naomiprofilepicture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #333;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Content - Moves Right */
+.profile-content {
+    flex-grow: 1;
+    text-align: left;
+}
+
+/* Heading and Paragraph */
+#home h1 {
+    font-size: 3em; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background */
+    padding: 20px; /* Padding for the "box" */
+    border-radius: 8px; /* Rounded corners (optional) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    display: inline-block; /* Make it fit the text width */
+    margin-bottom: 20px; /* Add some space below */
+    color: #fff; /* Ensure text is white */
+}
+
+#home p {
+    font-size: 1.2em;
+    color: #ddd;
+    max-width: 600px;
+}
+
+/* Footer Styling */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    position: relative; /* Solution 2: Position relative */
+    bottom: auto; /* Reset bottom property */
+}
+
+.footer-container {
+    max-width: 80%;
+    margin: auto;
+    padding: 10px 0;
+}
+
+.footer-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-container p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header nav ul li {
+        margin: 0 15px;
+    }
+
+    #home h1 {
+        font-size: 2.5em;
+    }
+
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .naomiprofilepicture {
+        width: 120px;
+        height: 120px;
+    }
+}
+/* Style for the text */
+.welcome-text {
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+    transform: scale(1); /* Initial scale: normal size */
+}
+
+/* Hover effect: Scale the text outward */
+.welcome-text:hover {
+    transform: scale(1.1); /* Scale up to 110% */
+}
+
+/* Triggered scale effect on page load */
+.welcome-text.trigger-scale {
+    transform: scale(0.8); /* Scale down to 80% */
+}
+
+/* General Styling for About Page */
+html, body {
+    background-color: rgb(27, 31, 28); /* Match with main page */
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.about-page {
+    font-family: 'Arial', sans-serif;
+}
+
+.about-page #about {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #1b1f1c;
+    max-width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+.about-page #about h1 {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.about-page #about p {
+    font-size: 1.1em;
+    color: #ddd;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Internal Navigation - Make Links Horizontal */
+.about-page #internal-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    background: #222;
+    border-radius: 8px;
+    max-width: 90%;
+    margin: 30px auto;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+.about-page #internal-nav a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    padding: 10px 15px;
+}
+
+.about-page #internal-nav a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+/* Section Styling */
+.about-page section {
+    padding: 30px;
+    background: #1b1f1c;
+    margin: 20px auto;
+    max-width: 85%;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(255, 255, 255, 0.05);
+    text-align: center; /* Add this line to center content */
+}
+
+/* ... rest of your CSS ... */
+
+.about-page section h2 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 10px;
+    border-bottom: 2px solid rgb(255, 69, 105);
+    padding-bottom: 5px;
+    display: inline-block;
+    text-align: center;
+}
+
+.about-page section p, 
+.about-page section ul {
+    font-size: 1.1em;
+    color: #ccc;
+    line-height: 1.6;
+    text-align: center; /* Center text in paragraphs and lists */
+}
+
+/* Bullet List Styling */
+.about-page section ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.about-page section ul li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.about-page section ul li::before {
+    position: absolute;
+    left: 0;
+    color: rgb(255, 69, 105);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Sticky Footer */
+.about-page body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.about-page main {
+    flex: 1;
+}
+
+.about-page footer {
+    text-align: center;
+    padding: 15px;
+    background: #333;
+    color: white;
+    font-size: 14px;
+    position: relative;
+    bottom: auto;
+    width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-page #about {
+        max-width: 95%;
+        padding: 40px 15px;
+    }
+
+    .about-page #about h1 {
+        font-size: 2em;
+    }
+
+    .about-page #about img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .about-page #internal-nav {
+        max-width: 95%;
+        padding: 8px;
+    }
+
+    .about-page #internal-nav a {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+
+    .about-page section {
+        max-width: 95%;
+        padding: 25px;
+    }
+
+    .about-page section h2 {
+        font-size: 1.8em;
+    }
+}
+
+/* General Styling for Services Page */
+.services-page {
+    font-family: Arial, sans-serif;
+    background-color: rgb(27, 31, 28); /* Match home page */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #fff;
+}
+
+/* Services Section */
+.services-page #services {
+    padding: 50px 20px;
+    text-align: center;
+    background: #1b1f1c;
+    border-radius: 8px;
+    max-width: 85%;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+.services-page #services h2 {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgb(255, 69, 105);
+    display: inline-block;
+}
+
+/* Service List Grid */
+.services-page .services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    margin: 40px auto;
+    width: 90%;
+}
+
+.services-page .services-list div {
+    background: #333;
+    padding: 30px;
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+    text-align: center;
+    color: #ddd;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+}
+
+.services-page .services-list div h2 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.services-page .services-list div:hover {
+    background: #ff004f;
+    transform: translateY(-8px);
+    color: white;
+}
+
+/* Sticky Footer Fix and Layout Improvement */
+.services-page body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.services-page main {
+    flex: 1; /* Allow main content to grow */
+}
+
+.services-page footer {
+    text-align: center;
+    padding: 15px;
+    background: #333;
+    color: white;
+    font-size: 14px;
+    position: relative; /* Changed from sticky to relative */
+    bottom: auto; /* Reset bottom property */
+    width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .services-page #services {
+        max-width: 95%;
+        padding: 40px 15px;
+    }
+
+    .services-page #services h2 {
+        font-size: 2em;
+    }
+
+    .services-page .services-list {
+        width: 100%;
+        grid-gap: 20px;
+    }
+
+    .services-page .services-list div {
+        padding: 20px;
+    }
+
+    .services-page .services-list div h2 {
+        font-size: 18px;
+    }
+}
+/* General Styling for Contact Page */
+.contact-page {
+    font-family: Arial, sans-serif;
+    background-color: rgb(27, 31, 28); /* Matching main page background */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #fff;
+}
+
+/* Force box-sizing globally */
+* {
+    box-sizing: border-box;
+}
+
+/* Main Section - Flex Layout */
+.contact-page main {
+    flex: 1;
+    display: flex;
+    flex-direction: row; /* Side-by-side layout */
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 30px;
+    gap: 40px;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contact Form (Left Side) */
+.contact-page .contact-container {
+    flex: 1 1 60%; /* Allow growing/shrinking */
+    max-width: 60%;
+    background-color: #1B1F1C;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+}
+
+/* Contact Form Styling */
+.contact-page h2 {
+    text-align: center;
+    color: #fff;
+}
+
+.contact-page .contact-form label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+    color: #ddd;
+}
+
+.contact-page .contact-form input,
+.contact-page .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+
+.contact-page .contact-form textarea {
+    height: 150px;
+}
+
+.contact-page .button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-page .button-group button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contact-page .submit-btn {
+    background: #28a745;
+    color: white;
+}
+
+.contact-page .cancel-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.contact-page .submit-btn:hover {
+    background: #218838;
+}
+
+.contact-page .cancel-btn:hover {
+    background: #c82333;
+}
+
+/* Let’s Connect (Right Side) */
+.contact-page .social-links {
+    flex: 1 1 35%; /* Allow growing/shrinking */
+    max-width: 35%;
+    background-color: #1B1F1C;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.contact-page .social-links h2 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.contact-page .social-links a {
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.contact-page .social-links img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-page .social-links .gmail img {
+    filter: grayscale(100%) brightness(50%);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.contact-page .social-links a:hover img {
+    transform: scale(1.1);
+}
+
+.contact-page .social-links .gmail:hover img {
+    filter: grayscale(0%) brightness(100%);
+}
+
+/* Footer */
+.contact-page footer {
+    text-align: center;
+    padding: 15px;
+    background: #333;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+    bottom: auto;
+    margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-page main {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .contact-page .contact-container,
+    .contact-page .social-links {
+        width: 90%;
+    }
+}
