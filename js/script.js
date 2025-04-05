@@ -6,38 +6,24 @@ window.addEventListener('load', function() {
     welcomeText.classList.add('trigger-scale');
 });
 
-// Function to show the thank you message and submit the form
-function showThankYouMessage(event) {
-    event.preventDefault(); // Prevents the form from refreshing the page
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    const thankYouMessage = document.getElementById('thank-you-message');
 
-    // Show the "Thank You" message
-    document.getElementById('thank-you-message').style.display = 'block';
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default Netlify form handling
 
-    // Optionally, reset the form fields after submission
-    document.querySelector('form').reset();
-
-    // Submit the form to Netlify using the native form submission (without a page refresh)
-    const form = event.target;
-
-    // Using the FormData API to get form data and send it to Netlify
-    const formData = new FormData(form);
-
-    // Optionally, you can send this data to a backend or service via fetch
-    fetch(form.action, {
-        method: 'POST',
-        body: formData,
-    })
-    .then(response => {
-        if (response.ok) {
-            console.log('Form submitted successfully!');
-        } else {
-            console.error('Error during form submission');
-        }
-    })
-    .catch(error => {
-        console.error('Form submission error:', error);
-    });
-
-    // Ensure that form submission happens to Netlify after displaying the thank-you message
-    form.submit();  // Trigger the native form submission to Netlify after the message
-}
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(new FormData(form)).toString(),
+            })
+            .then(() => {
+                form.style.display = 'none'; // Hide the form
+                thankYouMessage.style.display = 'block'; // Show the thank you message
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    }
+});

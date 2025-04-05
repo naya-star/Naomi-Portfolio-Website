@@ -235,8 +235,6 @@ html, body {
     text-align: center; /* Add this line to center content */
 }
 
-/* ... rest of your CSS ... */
-
 .about-page section h2 {
     font-size: 2em;
     color: #fff;
@@ -244,7 +242,6 @@ html, body {
     border-bottom: 2px solid rgb(255, 69, 105);
     padding-bottom: 5px;
     display: inline-block;
-    text-align: center;
 }
 
 .about-page section p, 
@@ -263,18 +260,14 @@ html, body {
 }
 
 .about-page section ul li {
-    padding-left: 20px;
+    padding-left: 0; /* Remove left padding to center list items */
     position: relative;
     margin-bottom: 8px;
     text-align: center;
 }
 
 .about-page section ul li::before {
-    position: absolute;
-    left: 0;
-    color: rgb(255, 69, 105);
-    font-weight: bold;
-    text-align: center;
+    display: none; /* Hide bullet points */
 }
 
 /* Sticky Footer */
@@ -334,7 +327,6 @@ html, body {
         font-size: 1.8em;
     }
 }
-
 /* General Styling for Services Page */
 .services-page {
     font-family: Arial, sans-serif;
@@ -488,7 +480,7 @@ html, body {
 
 /* Contact Form Styling */
 .contact-page h2 {
-    text-align: center;
+    text-align: left;
     color: #fff;
 }
 
@@ -521,7 +513,6 @@ html, body {
     margin-top: 20px;
     font-weight: bold;
 }
-
 
 .contact-page .button-group {
     display: flex;
