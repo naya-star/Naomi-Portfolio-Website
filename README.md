@@ -39,18 +39,18 @@ To view or edit this project locally, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/naya-star/NaomiPortfolio.git
+    git clone https://github.com/naya-star/Naomi-Portfolio-Website.git
     ```
 2. Navigate to the project directory:
     ```bash
-    cd portfolio
-    ```
+    cd Naomi-Portfolio-Website
+
 3. Open `index.html` in your browser to view the website.
 
 ## Deployment
 This portfolio website is deployed on **Netlify**. To access the live version, click the link below:
 
-- [Live Demo](https://your-portfolio.netlify.app)
+- Click here to view my portfolio site(https://Naomi-Portfolio.netlify.app)
 
 ## Development Process
 
@@ -69,9 +69,3 @@ This project was developed with the following goals in mind:
 ---
 
 Feel free to connect with me through the contact form or reach out via my social media links!
-
----
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
