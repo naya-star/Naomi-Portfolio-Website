@@ -50,7 +50,7 @@ To view or edit this project locally, follow these steps:
 ## Deployment
 This portfolio website is deployed on **Netlify**. To access the live version, click the link below:
 
-- Click here to view my portfolio site(https://Naomi-Portfolio.netlify.app)
+- Click here to view my portfolio site https://naya-star.netlify.app/
 
 ## Development Process
 
